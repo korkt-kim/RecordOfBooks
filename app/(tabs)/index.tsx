@@ -1,16 +1,20 @@
-import { Pressable, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native'
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-import { Stack } from 'expo-router';
-import { Link } from 'expo-router';
-import { FontAwesome } from '@expo/vector-icons';
+import EditScreenInfo from '@/components/EditScreenInfo'
+import { Text, View } from '@/components/Themed'
+import { Stack } from 'expo-router'
+import { Link } from 'expo-router'
+import { FontAwesome } from '@expo/vector-icons'
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
       <EditScreenInfo path="app/(tabs)/index.tsx" />
       <Link href="/books/search" asChild>
         <Pressable>
@@ -24,7 +28,7 @@ export default function TabOneScreen() {
         </Pressable>
       </Link>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -42,4 +46,4 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
-});
+})
